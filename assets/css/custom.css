@@ -1,0 +1,202 @@
+/* Laboratory Work 9 - custom styles */
+
+/* Typography */
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #263238;
+  background: #f7f9fc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  color: #203a5f;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.45rem;
+}
+
+p {
+  color: #4b5563;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+/* Links */
+a {
+  color: #315f83;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #1d3557;
+}
+
+/* Button + pseudo-classes */
+.cv-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 20px;
+  background: #315f83;
+  color: #ffffff;
+  border: 2px solid #315f83;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.cv-button:hover {
+  background: #ffffff;
+  color: #315f83;
+  transform: translateY(-2px);
+}
+
+.cv-button:active {
+  background: #203a5f;
+  color: #ffffff;
+  transform: translateY(0);
+}
+
+/* About, Resume and Portfolio spacing */
+#about,
+#resume,
+#portfolio {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#about .content,
+.resume .resume-item,
+#portfolio .col-lg-4 {
+  background: #ffffff;
+  border: 1px solid #d7e0ea;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(32, 58, 95, 0.10);
+  padding: 24px;
+}
+
+.resume .resume-item {
+  margin: 0 0 20px 0;
+}
+
+#portfolio .col-lg-4 {
+  margin-bottom: 20px;
+}
+
+#portfolio img {
+  border-radius: 8px;
+}
+
+/* Selected component 1: navigation */
+.navmenu ul {
+  background: #eef3f8;
+  padding: 10px;
+  border: 1px solid #d7e0ea;
+  border-radius: 18px;
+  box-shadow: 0 4px 12px rgba(32, 58, 95, 0.12);
+}
+
+/* Selected component 2: footer */
+#footer {
+  background: #203a5f;
+  color: #ffffff;
+  border-top: 4px solid #6f91b2;
+  box-shadow: 0 -4px 12px rgba(32, 58, 95, 0.12);
+  padding: 36px 0;
+}
+
+#footer h3,
+#footer p,
+#footer a {
+  color: #ffffff;
+}
+
+/* Complementary task: lists */
+.tools-list,
+.steps-list {
+  padding-left: 0;
+  list-style: none;
+  counter-reset: step;
+}
+
+.tools-list > li {
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 12px 10px 36px;
+  background: #eef3f8;
+  border-radius: 8px;
+}
+
+.tools-list > li::before {
+  content: "✓";
+  position: absolute;
+  left: 12px;
+  color: #315f83;
+  font-weight: 700;
+}
+
+.steps-list > li {
+  counter-increment: step;
+  position: relative;
+  margin: 10px 0;
+  padding: 10px 12px 10px 42px;
+  background: #f3f5f7;
+  border-radius: 8px;
+}
+
+.steps-list > li::before {
+  content: counter(step);
+  position: absolute;
+  left: 12px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  border-radius: 50%;
+  background: #315f83;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.nested-list {
+  margin-top: 8px;
+  padding: 8px 8px 8px 28px;
+  background: #ffffff;
+  border-left: 3px solid #6f91b2;
+  border-radius: 6px;
+  list-style: square;
+}
+
+/* Complementary task: table */
+#services table {
+  width: 100%;
+  background: #ffffff;
+}
+
+#services table th,
+#services table td {
+  padding: 14px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#services table thead th {
+  background: #203a5f;
+  color: #ffffff;
+}
+
+#services table tbody tr:nth-child(even) {
+  background: #eef3f8;
+}
+
+#services table tbody tr:hover {
+  background: #dfe9f2;
+}
